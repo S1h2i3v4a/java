@@ -1,16 +1,34 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> strlist = new ArrayList<>(); //also written as (new ArrayList<String>())7
+        List<String> strlist = new ArrayList<>(); //also written as (new ArrayList<String>())
         strlist.add("SHIVAM");
         strlist.add("KESHARI");
         strlist.add("yes");
-        for (String s : strlist) {
-            System.out.println(s);
+        display(strlist);
+        strlist.add(1,"cse");
+        display(strlist);
+        strlist.remove(1);
+        display(strlist);
+        strlist.remove("KESHARI");
+        display(strlist);
+        strlist.set(1,"KESHARI");
+        display(strlist);
+        System.out.println(strlist.size());
+        System.out.println(strlist.get(1));
+        System.out.println(strlist.contains("SHIVAM"));
+        strlist.clear();
+        display(strlist);
+
+
+    }
+    public static void display(List Lst){
+        for (Object s:Lst) {
+            System.out.print(s + " ");
         }
-
-
+        System.out.println(" ");
     }
 }

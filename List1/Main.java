@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.security.cert.CollectionCertStoreParameters;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,9 +24,9 @@ public class Main {
 
 
     }
-    public static void display(List Lst){
+    public static void display(Collection Lst){
         for (Object s:Lst) {
-            System.out.print(s + " ");
+            System.out.print(s.toString() + " ");
         }
         System.out.println(" ");
     }
